@@ -6,6 +6,7 @@ import test.pages.FirstScreenPage;
 public class FirstScreenTest extends base.AppiumBaseTest {
 
     @Test
+    // Test Case #1
     public void testFirstScreen() {
         FirstScreenPage firstScreen = new FirstScreenPage(driver);
 
@@ -14,8 +15,6 @@ public class FirstScreenTest extends base.AppiumBaseTest {
         firstScreen.getOnlineLessonImage();
         firstScreen.getContinueElement();
         firstScreen.getButtonForward();
-
-
 
 
     }

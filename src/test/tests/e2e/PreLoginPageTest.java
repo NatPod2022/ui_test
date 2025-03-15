@@ -8,6 +8,7 @@ import test.pages.PreLoginPage;
 public class PreLoginPageTest extends base.AppiumBaseTest {
 
     @Test
+    // Test Case #2
     public void testPreLoginPage() {
 
         FirstScreenPage firstScreen = new FirstScreenPage(driver);

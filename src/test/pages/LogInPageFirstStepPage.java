@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 public class LogInPageFirstStepPage extends BaseActions {
 
 
-
     public By logInTitle = By.xpath("//android.view.View[@content-desc='Log in to your account']");
     public By logInGoogleButton = By.xpath("//android.widget.ImageView[@content-desc='Log in with Google']");
     public By logInEmailPhoneButton = By.xpath("//android.widget.Button[@content-desc='Log in with email/phone']");

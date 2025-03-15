@@ -19,18 +19,18 @@ public class FirstScreenPage extends BaseActions {
     }
 
     public WebElement getSkipButton() {
-        return waitForElementPresent(skipButton, "Cannot find Skip button", 5,true);
+        return waitForElementPresent(skipButton, "Cannot find Skip button", 5, true);
     }
 
     public WebElement getOnlineLessonImage() {
-        return waitForElementPresent(onlineLessonImage, "Cannot find Image 'Online lesson' image", 5,true);
+        return waitForElementPresent(onlineLessonImage, "Cannot find Image 'Online lesson' image", 5, true);
     }
 
     public WebElement getContinueElement() {
-        return waitForElementPresent(continueElement, "Cannot find --- element", 5,true);
+        return waitForElementPresent(continueElement, "Cannot find --- element", 5, true);
     }
 
     public WebElement getButtonForward() {
-        return waitForElementPresent(buttonForward, "Cannot find -> button", 5,true);
+        return waitForElementPresent(buttonForward, "Cannot find -> button", 5, true);
     }
 }
