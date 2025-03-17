@@ -27,11 +27,8 @@ public class LoginStepByEmailTest extends base.AppiumBaseTest {
         // Click on LogInEmailPhoneButton
         testLogInPageFirstStep.getLogInEmailPhoneButton().click();
 
-        // Ждем 3 секунды (если задержка не помогает — убираем)
-        Thread.sleep(3000);
 
-
-        // Проверяем элементы
+        // Check LoginStepByEmailPage elements:
         testLogInStepByEmail.getLogInTitleSecondStep();
         testLogInStepByEmail.getEmailTab();
         testLogInStepByEmail.getPhoneTab();

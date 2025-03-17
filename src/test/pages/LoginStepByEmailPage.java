@@ -35,7 +35,7 @@ public class LoginStepByEmailPage extends BaseActions {
     }
 
     public WebElement getLogInInputField() {
-        return waitForElementPresent(logInInputField, "Cannot find input field for login", 5, true);
+        return waitForElementPresent(logInInputField, "Cannot find input field for login by Email", 5, true);
     }
 
     public WebElement getContinueButton() {
