@@ -36,6 +36,7 @@ public class LoginStepByPhoneTest extends base.AppiumBaseTest {
         // Check LoginStepByEmailPage elements:
         testLogInStepByPhone.getphoneIndex();
         testLogInStepByPhone.getlogInInputFieldPhone();
+        testLogInStepByPhone.getLoginWithPasswordPhoneButton();
 
 
     }
