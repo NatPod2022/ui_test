@@ -7,7 +7,7 @@ import test.interactions.BaseActions;
 
 public class LoginWithPasswordEmailPage extends BaseActions {
 
-    public By passwordInputField = By.xpath("//android.view.View[contains(@content-desc, 'Log in to your account')]//android.widget.EditText");
+    public By passwordInputField = By.xpath("//android.view.View[@content-desc='Log in to your account']/android.widget.EditText[2]");
     public By signInButton = By.xpath("//android.widget.Button[contains(@content-desc, 'Sign in')]");
     public By loginWithAccessCodeButton = By.xpath("//android.widget.Button[contains(@content-desc, 'Login with access code')]");
     public By forgotPasswordButton = By.xpath("//android.widget.Button[@content-desc='I forgot password']");

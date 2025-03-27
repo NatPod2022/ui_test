@@ -19,7 +19,7 @@ public class AppiumBaseTest {
         capabilities.setCapability("appPackage", "com.novakid.student");
         capabilities.setCapability("appActivity", "com.novakid.student.MainActivity");
         capabilities.setCapability("automationName", "Appium");
-        capabilities.setCapability("app", "C:/Users/Natalia/OneDrive/Рабочий стол/JavaAppiumAutomation/JavaAppiumAutomation/apks/Novakid.apk");
+        capabilities.setCapability("app", "C:/Users/Natalia/OneDrive/Рабочий стол/JavaAppiumAutomation/JavaAppiumAutomation/apks/app-prod.apk");
         capabilities.setCapability("newCommandTimeout", 300);
         capabilities.setCapability("adbExecTimeout", 60000);
 

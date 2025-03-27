@@ -21,8 +21,6 @@ public class LoginWithPasswordPhoneTest extends AppiumBaseTest {
         LogInPageFirstStepPage testLogInPageFirstStep = new LogInPageFirstStepPage(driver);
         LoginStepByEmailPage testLogInStepByEmail = new LoginStepByEmailPage(driver);
         LoginStepByPhonePage testLogInStepByPhone = new LoginStepByPhonePage(driver);
-
-        LoginWithPasswordEmailPage testLoginWithPasswordEmail = new LoginWithPasswordEmailPage(driver);
         LoginWithPasswordPhonePage testLoginWithPasswordPhone = new LoginWithPasswordPhonePage(driver);
 
         //* Steps:
