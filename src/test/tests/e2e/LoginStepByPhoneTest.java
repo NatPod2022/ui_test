@@ -6,37 +6,35 @@ import test.pages.LoginStepByPhonePage;
 import test.pages.PreLoginPage;
 import test.pages.LogInPageFirstStepPage;
 import test.pages.LoginStepByEmailPage;
+import test.test_setup.BasePages;
 
 public class LoginStepByPhoneTest extends base.AppiumBaseTest {
 
     @Test
     // Test Case #5
     public void testLogInStepByPhone() throws InterruptedException {
-
-        FirstScreenPage firstScreen = new FirstScreenPage(driver);
-        PreLoginPage testPreLogin = new PreLoginPage(driver);
-        LogInPageFirstStepPage testLogInPageFirstStep = new LogInPageFirstStepPage(driver);
-        LoginStepByEmailPage testLogInStepByEmail = new LoginStepByEmailPage(driver);
-        LoginStepByPhonePage testLogInStepByPhone = new LoginStepByPhonePage(driver);
+        // Инициализация всех Page Object'ов через BasePages
+        BasePages pages = new BasePages();
+        pages.initPages(driver);
 
         //* Steps:
         // Click on SkipButton
-        firstScreen.getSkipButton().click();
+        pages.firstScreen.getSkipButton().click();
 
         // Click on LoginButton
-        testPreLogin.getLoginButton().click();
+        pages.testPreLogin.getLoginButton().click();
 
         // Click on LogInEmailPhoneButton
-        testLogInPageFirstStep.getLogInEmailPhoneButton().click();
+        pages.testLogInPageFirstStep.getLogInEmailPhoneButton().click();
 
         // Click on phoneTab
-        testLogInStepByEmail.getPhoneTab().click();
+        pages.testLogInStepByEmail.getPhoneTab().click();
 
 
         // Check LoginStepByEmailPage elements:
-        testLogInStepByPhone.getphoneIndex();
-        testLogInStepByPhone.getlogInInputFieldPhone();
-        testLogInStepByPhone.getLoginWithPasswordPhoneButton();
+        pages.testLogInStepByPhone.getphoneIndex();
+        pages.testLogInStepByPhone.getlogInInputFieldPhone();
+        pages.testLogInStepByPhone.getLoginWithPasswordPhoneButton();
 
 
     }

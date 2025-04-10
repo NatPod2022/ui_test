@@ -2,19 +2,22 @@ package test.tests.e2e;
 
 import org.junit.Test;
 import test.pages.FirstScreenPage;
+import test.test_setup.BasePages;
 
 public class FirstScreenTest extends base.AppiumBaseTest {
 
     @Test
     // Test Case #1
     public void testFirstScreen() {
-        FirstScreenPage firstScreen = new FirstScreenPage(driver);
+        // Инициализация всех Page Object'ов через BasePages
+        BasePages pages = new BasePages();
+        pages.initPages(driver);
 
         //Check FirstScreenPage elements
-        firstScreen.getSkipButton();
-        firstScreen.getOnlineLessonImage();
-        firstScreen.getContinueElement();
-        firstScreen.getButtonForward();
+        pages.firstScreen.getSkipButton();
+        pages.firstScreen.getOnlineLessonImage();
+        pages.firstScreen.getContinueElement();
+        pages.firstScreen.getButtonForward();
 
 
     }

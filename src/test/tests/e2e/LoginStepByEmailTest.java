@@ -5,37 +5,36 @@ import test.pages.FirstScreenPage;
 import test.pages.PreLoginPage;
 import test.pages.LogInPageFirstStepPage;
 import test.pages.LoginStepByEmailPage;
+import test.test_setup.BasePages;
 
 public class LoginStepByEmailTest extends base.AppiumBaseTest {
 
     @Test
     // Test Case #4
     public void testLogInStepByEmail() throws InterruptedException {
-
-        FirstScreenPage firstScreen = new FirstScreenPage(driver);
-        PreLoginPage testPreLogin = new PreLoginPage(driver);
-        LogInPageFirstStepPage testLogInPageFirstStep = new LogInPageFirstStepPage(driver);
-        LoginStepByEmailPage testLogInStepByEmail = new LoginStepByEmailPage(driver);
+        // Инициализация всех Page Object'ов через BasePages
+        BasePages pages = new BasePages();
+        pages.initPages(driver);
 
         //* Steps:
         // Click on Skip
-        firstScreen.getSkipButton().click();
+        pages.firstScreen.getSkipButton().click();
 
         // Click on LogIn
-        testPreLogin.getLoginButton().click();
+        pages.testPreLogin.getLoginButton().click();
 
         // Click on LogInEmailPhoneButton
-        testLogInPageFirstStep.getLogInEmailPhoneButton().click();
+        pages.testLogInPageFirstStep.getLogInEmailPhoneButton().click();
 
 
         // Check LoginStepByEmailPage elements:
-        testLogInStepByEmail.getLogInTitleSecondStep();
-        testLogInStepByEmail.getEmailTab();
-        testLogInStepByEmail.getPhoneTab();
-        testLogInStepByEmail.getLogInInputField();
-        testLogInStepByEmail.getContinueButton();
-        testLogInStepByEmail.getLoginWithPasswordButton();
-        testLogInStepByEmail.getBackButtonSecond();
+        pages.testLogInStepByEmail.getLogInTitleSecondStep();
+        pages.testLogInStepByEmail.getEmailTab();
+        pages.testLogInStepByEmail.getPhoneTab();
+        pages.testLogInStepByEmail.getLogInInputField();
+        pages.testLogInStepByEmail.getContinueButton();
+        pages.testLogInStepByEmail.getLoginWithPasswordButton();
+        pages.testLogInStepByEmail.getBackButtonSecond();
 
 
     }

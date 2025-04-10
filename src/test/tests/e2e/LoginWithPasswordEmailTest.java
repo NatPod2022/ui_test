@@ -9,37 +9,36 @@ import test.pages.LoginStepByPhonePage;
 import test.pages.LoginWithPasswordEmailPage;
 import base.AppiumBaseTest;
 import test.pages.PreLoginPage;
+import test.test_setup.BasePages;
 
 public class LoginWithPasswordEmailTest extends AppiumBaseTest {
 
     @Test
     // Test Case #6
     public void testLoginWithPasswordEmail() {
-        FirstScreenPage firstScreen = new FirstScreenPage(driver);
-        PreLoginPage testPreLogin = new PreLoginPage(driver);
-        LogInPageFirstStepPage testLogInPageFirstStep = new LogInPageFirstStepPage(driver);
-        LoginStepByEmailPage testLogInStepByEmail = new LoginStepByEmailPage(driver);
-        LoginWithPasswordEmailPage testLoginWithPasswordEmail = new LoginWithPasswordEmailPage(driver);
+        // Инициализация всех Page Object'ов через BasePages
+        BasePages pages = new BasePages();
+        pages.initPages(driver);
 
         //* Steps:
         // Click on Skip
-        firstScreen.getSkipButton().click();
+        pages.firstScreen.getSkipButton().click();
 
         // Click on LogIn
-        testPreLogin.getLoginButton().click();
+        pages.testPreLogin.getLoginButton().click();
 
         // Click on LogInEmailPhoneButton
-        testLogInPageFirstStep.getLogInEmailPhoneButton().click();
+        pages.testLogInPageFirstStep.getLogInEmailPhoneButton().click();
 
         // Click on LoginWithPasswordButton
-        testLogInStepByEmail.getLoginWithPasswordButton().click();
+        pages.testLogInStepByEmail.getLoginWithPasswordButton().click();
 
 
         // Check:
-        testLoginWithPasswordEmail.getPasswordInputField();
-        testLoginWithPasswordEmail.getSignInButton();
-        testLoginWithPasswordEmail.getLoginWithAccessCodeButton();
-        testLoginWithPasswordEmail.getForgotPasswordButton();
+        pages.testLoginWithPasswordEmail.getPasswordInputField();
+        pages.testLoginWithPasswordEmail.getSignInButton();
+        pages.testLoginWithPasswordEmail.getLoginWithAccessCodeButton();
+        pages.testLoginWithPasswordEmail.getForgotPasswordButton();
 
 
 

@@ -3,54 +3,50 @@ package test.tests.e2e;
 import base.AppiumBaseTest;
 import org.junit.Test;
 import test.pages.*;
+import test.test_setup.BasePages;
 
 public class PreTrialDashboardAfterCancelTrialTest extends AppiumBaseTest {
 
     @Test
     // Test Case #8
     public void testPreTrialDashboardAfterCancelTrialFlow() {
-        FirstScreenPage firstScreen = new FirstScreenPage(driver);
-        PreLoginPage testPreLogin = new PreLoginPage(driver);
-        LogInPageFirstStepPage testLogInPageFirstStep = new LogInPageFirstStepPage(driver);
-        LoginStepByEmailPage testLogInStepByEmail = new LoginStepByEmailPage(driver);
-        LoginStepByPhonePage testLogInStepByPhone = new LoginStepByPhonePage(driver);
-        LoginWithPasswordPhonePage testLoginWithPasswordPhone = new LoginWithPasswordPhonePage(driver);
-        PreTrialDashboardAfterCancelTrialPage dashboardPage = new PreTrialDashboardAfterCancelTrialPage(driver);
-        LoginWithPasswordEmailPage testLoginWithPasswordEmail =  new LoginWithPasswordEmailPage(driver);
+        // Инициализация всех Page Object'ов через BasePages
+        BasePages pages = new BasePages();
+        pages.initPages(driver);
 
         // Steps:
         // Click on Skip
-        firstScreen.getSkipButton().click();
+        pages.firstScreen.getSkipButton().click();
 
         // Click on LogIn
-        testPreLogin.getLoginButton().click();
+        pages.testPreLogin.getLoginButton().click();
 
         // Click on LogInEmailPhoneButton
-        testLogInPageFirstStep.getLogInEmailPhoneButton().click();
+        pages.testLogInPageFirstStep.getLogInEmailPhoneButton().click();
 
         // Click on LoginWithPasswordButton
-        testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
+        pages.testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
 
         // Insert Email and Password
-        testLogInStepByEmail.getLogInInputField().sendKeys("np_test@mail.nv");
-        testLoginWithPasswordEmail.getPasswordInputField().sendKeys("12345678");
+        pages.testLogInStepByEmail.getLogInInputField().sendKeys("np_test@mail.nv");
+        pages.testLoginWithPasswordEmail.getPasswordInputField().sendKeys("12345678");
 
         // Click on Sign in
-        testLoginWithPasswordPhone.getSignInPhoneButton().click();
+        pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
         // Check:
-        dashboardPage.getLogoParent();
-        dashboardPage.getLabelNovakid();
-        dashboardPage.getTitle();
-        dashboardPage.getBookButton();
-        dashboardPage.getDashboardTab();
-        dashboardPage.getTextWeAreSorry();
-        dashboardPage.getStudentBlock();
-        dashboardPage.getSupportTab();
-        dashboardPage.getAchievementTab();
-        dashboardPage.getKaTab();
-        dashboardPage.getScheduleTab();
-        dashboardPage.getTitleHomework();
+        pages.dashboardPage.getLogoParent();
+        pages.dashboardPage.getLabelNovakid();
+        pages.dashboardPage.getTitle();
+        pages.dashboardPage.getBookButton();
+        pages.dashboardPage.getDashboardTab();
+        pages.dashboardPage.getTextWeAreSorry();
+        pages.dashboardPage.getStudentBlock();
+        pages.dashboardPage.getSupportTab();
+        pages.dashboardPage.getAchievementTab();
+        pages.dashboardPage.getKaTab();
+        pages.dashboardPage.getScheduleTab();
+        pages.dashboardPage.getTitleHomework();
 
     }
 }

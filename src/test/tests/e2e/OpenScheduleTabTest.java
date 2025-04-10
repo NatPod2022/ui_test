@@ -1,67 +1,52 @@
 package test.tests.e2e;
 
 import org.junit.Test;
-
 import base.AppiumBaseTest;
-import test.pages.FirstScreenPage;
-import test.pages.LogInPageFirstStepPage;
-import test.pages.LoginStepByEmailPage;
-import test.pages.LoginStepByPhonePage;
-import test.pages.LoginWithPasswordEmailPage;
-import test.pages.LoginWithPasswordPhonePage;
-import test.pages.OpenScheduleTabPage;
-import test.pages.PreLoginPage;
-import test.pages.PreTrialDashboardAfterCancelTrialPage;
+import test.test_setup.BasePages;
 
 public class OpenScheduleTabTest extends AppiumBaseTest {
 
     @Test
     // Test Case #9
-    public void testOpenScheduleTabElements() {
-        FirstScreenPage firstScreen = new FirstScreenPage(driver);
-        PreLoginPage testPreLogin = new PreLoginPage(driver);
-        LogInPageFirstStepPage testLogInPageFirstStep = new LogInPageFirstStepPage(driver);
-        LoginStepByEmailPage testLogInStepByEmail = new LoginStepByEmailPage(driver);
-        LoginStepByPhonePage testLogInStepByPhone = new LoginStepByPhonePage(driver);
-        LoginWithPasswordPhonePage testLoginWithPasswordPhone = new LoginWithPasswordPhonePage(driver);
-        LoginWithPasswordEmailPage testLoginWithPasswordEmail = new LoginWithPasswordEmailPage(driver);
-        PreTrialDashboardAfterCancelTrialPage dashboardPage = new PreTrialDashboardAfterCancelTrialPage(driver);
-        OpenScheduleTabPage schedulePage = new OpenScheduleTabPage(driver);
+        public void testOpenScheduleTabElements() {
+            // Инициализация всех Page Object'ов через BasePages
+            BasePages pages = new BasePages();
+            pages.initPages(driver);
 
         // Steps:
         // Click on Skip
-        firstScreen.getSkipButton().click();
+        pages.firstScreen.getSkipButton().click();
 
         // Click on LogIn
-        testPreLogin.getLoginButton().click();
+        pages.testPreLogin.getLoginButton().click();
 
         // Click on LogInEmailPhoneButton
-        testLogInPageFirstStep.getLogInEmailPhoneButton().click();
+        pages.testLogInPageFirstStep.getLogInEmailPhoneButton().click();
 
         // Click on LoginWithPasswordButton
-        testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
+        pages.testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
 
         // Insert Email and Password
-        testLogInStepByEmail.getLogInInputField().sendKeys("np_test@mail.nv");
-        testLoginWithPasswordEmail.getPasswordInputField().sendKeys("12345678");
+        pages.testLogInStepByEmail.getLogInInputField().sendKeys("np_test@mail.nv");
+        pages.testLoginWithPasswordEmail.getPasswordInputField().sendKeys("12345678");
 
         // Click on Sign in
-        testLoginWithPasswordPhone.getSignInPhoneButton().click();
+        pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
         // Click on Schedule tab
-        dashboardPage.getScheduleTab().click();
+        pages.dashboardPage.getScheduleTab().click();
 
         // Checks:
-        schedulePage.getTittleSchedule();
-        schedulePage.getPremiumLesson();
-        schedulePage.getStandardLesson();
-        schedulePage.getUpcomingTab();
-        schedulePage.getCompletedTab();
-        schedulePage.getTimeZoneText();
-        schedulePage.getNoLessonsMessage();
-        schedulePage.getBookLessonsButton();
-        schedulePage.getPremiumLessonCount();
-        schedulePage.getStandardLessonCount();
+        pages.schedulePage.getTittleSchedule();
+        pages.schedulePage.getPremiumLesson();
+        pages.schedulePage.getStandardLesson();
+        pages.schedulePage.getUpcomingTab();
+        pages.schedulePage.getCompletedTab();
+        pages.schedulePage.getTimeZoneText();
+        pages.schedulePage.getNoLessonsMessage();
+        pages.schedulePage.getBookLessonsButton();
+        pages.schedulePage.getPremiumLessonCount();
+        pages.schedulePage.getStandardLessonCount();
 
 
     }

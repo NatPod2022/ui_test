@@ -10,41 +10,39 @@ import test.pages.LoginWithPasswordEmailPage;
 import base.AppiumBaseTest;
 import test.pages.LoginWithPasswordPhonePage;
 import test.pages.PreLoginPage;
+import test.test_setup.BasePages;
 
 public class LoginWithPasswordPhoneTest extends AppiumBaseTest {
 
     @Test
     // Test Case #7
     public void testLoginWithPasswordPhone() {
-        FirstScreenPage firstScreen = new FirstScreenPage(driver);
-        PreLoginPage testPreLogin = new PreLoginPage(driver);
-        LogInPageFirstStepPage testLogInPageFirstStep = new LogInPageFirstStepPage(driver);
-        LoginStepByEmailPage testLogInStepByEmail = new LoginStepByEmailPage(driver);
-        LoginStepByPhonePage testLogInStepByPhone = new LoginStepByPhonePage(driver);
-        LoginWithPasswordPhonePage testLoginWithPasswordPhone = new LoginWithPasswordPhonePage(driver);
+        // Инициализация всех Page Object'ов через BasePages
+        BasePages pages = new BasePages();
+        pages.initPages(driver);
 
         //* Steps:
         // Click on Skip
-        firstScreen.getSkipButton().click();
+        pages.firstScreen.getSkipButton().click();
 
         // Click on LogIn
-        testPreLogin.getLoginButton().click();
+        pages.testPreLogin.getLoginButton().click();
 
         // Click on LogInEmailPhoneButton
-        testLogInPageFirstStep.getLogInEmailPhoneButton().click();
+        pages.testLogInPageFirstStep.getLogInEmailPhoneButton().click();
 
         // Click on phoneTab
-        testLogInStepByEmail.getPhoneTab().click();
+        pages.testLogInStepByEmail.getPhoneTab().click();
 
         // Click on LoginWithPasswordButton
-       testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
+        pages.testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
 
 
         // Check:
-        testLoginWithPasswordPhone.getPasswordPhoneInputField();
-        testLoginWithPasswordPhone.getSignInPhoneButton();
-        testLoginWithPasswordPhone.getLoginWithAccessPhoneCodeButton();
-        testLoginWithPasswordPhone.getForgotPasswordPhoneButton();
+        pages.testLoginWithPasswordPhone.getPasswordPhoneInputField();
+        pages.testLoginWithPasswordPhone.getSignInPhoneButton();
+        pages.testLoginWithPasswordPhone.getLoginWithAccessPhoneCodeButton();
+        pages.testLoginWithPasswordPhone.getForgotPasswordPhoneButton();
 
 
 
