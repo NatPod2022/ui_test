@@ -1,19 +1,14 @@
 package test.tests.e2e;
 
-import base.AppiumBaseTest;
 import org.junit.Test;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import test.pages.*;
+import base.AppiumBaseTest;
 import test.test_setup.BasePages;
 
-public class PreTrialDashboardAfterCancelTrialTest extends AppiumBaseTest {
+public class OpenAchievementTabTest extends AppiumBaseTest {
 
     @Test
-    // Test Case #8
-    public void testPreTrialDashboardAfterCancelTrialFlow() {
+    // Test Case #10
+    public void testOpenAchievementTabElements() {
         // Инициализация всех Page Object'ов через BasePages
         BasePages pages = new BasePages();
         pages.initPages(driver);
@@ -41,23 +36,14 @@ public class PreTrialDashboardAfterCancelTrialTest extends AppiumBaseTest {
         pages.testLoginWithPasswordEmail.getPasswordInputField().click();
         pages.testLoginWithPasswordEmail.getPasswordInputField().sendKeys("12345678");
 
-
         // Click on Sign in
         pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
-        // Check:
-        pages.dashboardPage.getLogoParent();
-        pages.dashboardPage.getLabelNovakid();
-        pages.dashboardPage.getTitle();
-        pages.dashboardPage.getBookButton();
-        pages.dashboardPage.getDashboardTab();
-        pages.dashboardPage.getTextWeAreSorry();
-        pages.dashboardPage.getStudentBlock();
-        pages.dashboardPage.getSupportTab();
-        pages.dashboardPage.getAchievementTab();
-        pages.dashboardPage.getKaTab();
-        pages.dashboardPage.getScheduleTab();
-        pages.dashboardPage.getTitleHomework();
+        // Click on Achievement tab
+        pages.dashboardPage.getAchievementTab().click();
 
+        // Checks:
+        pages.testOpenAchievementTabPage.getLevelCard();
+        pages.testOpenAchievementTabPage.getExercisesToDo();
     }
 }

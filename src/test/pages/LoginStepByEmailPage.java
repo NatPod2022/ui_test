@@ -12,7 +12,7 @@ public class LoginStepByEmailPage extends BaseActions {
     public By logInTitleSecondStep = By.xpath("//android.view.View[@content-desc='Log in to your account']");
     public By emailTab = By.xpath("//android.view.View[contains(@content-desc, 'Email')]");
     public By phoneTab = By.xpath("//android.view.View[contains(@content-desc, 'Phone')]");
-    public By logInInputField = By.xpath("//android.view.View[@content-desc='Log in to your account']/android.widget.EditText");
+    public By logInInputField = By.xpath("(//android.widget.EditText)[1]");
     public By continueButton = By.xpath("//android.widget.Button[@content-desc='Continue']");
     public By loginWithPasswordButton = By.xpath("//android.widget.Button[@content-desc='Login with password']");
     public By backButtonSecond = By.xpath("//android.widget.Button[contains(@content-desc, 'Back')]");

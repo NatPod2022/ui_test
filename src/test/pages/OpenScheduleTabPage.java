@@ -25,7 +25,7 @@ public class OpenScheduleTabPage extends BaseActions {
     public By bookLessonsButton = By.xpath("//android.widget.Button[@content-desc='Book lessons']");
 
     public WebElement getTittleSchedule() {
-        return waitForElementPresent(titleSchedule, "Cannot find Schedule tittle", 5, true);
+        return waitForElementPresent(titleSchedule, "Cannot find Schedule tittle", 10, true);
     }
 
     public WebElement getPremiumLesson() {

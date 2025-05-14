@@ -16,6 +16,9 @@ public class LoginStepByEmailTest extends base.AppiumBaseTest {
         BasePages pages = new BasePages();
         pages.initPages(driver);
 
+        // Клик по кнопке "Allow", если она есть
+        pages.allowPermission.clickAllowIfVisible();
+
         //* Steps:
         // Click on Skip
         pages.firstScreen.getSkipButton().click();

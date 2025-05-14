@@ -9,9 +9,12 @@ public class OpenScheduleTabTest extends AppiumBaseTest {
     @Test
     // Test Case #9
         public void testOpenScheduleTabElements() {
-            // Инициализация всех Page Object'ов через BasePages
-            BasePages pages = new BasePages();
-            pages.initPages(driver);
+        // Инициализация всех Page Object'ов через BasePages
+        BasePages pages = new BasePages();
+        pages.initPages(driver);
+
+        // Клик по кнопке "Allow", если она есть
+        pages.allowPermission.clickAllowIfVisible();
 
         // Steps:
         // Click on Skip
@@ -27,7 +30,10 @@ public class OpenScheduleTabTest extends AppiumBaseTest {
         pages.testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
 
         // Insert Email and Password
+        pages.testLogInStepByEmail.getLogInInputField().click();
         pages.testLogInStepByEmail.getLogInInputField().sendKeys("np_test@mail.nv");
+
+        pages.testLoginWithPasswordEmail.getPasswordInputField().click();
         pages.testLoginWithPasswordEmail.getPasswordInputField().sendKeys("12345678");
 
         // Click on Sign in
@@ -37,16 +43,16 @@ public class OpenScheduleTabTest extends AppiumBaseTest {
         pages.dashboardPage.getScheduleTab().click();
 
         // Checks:
-        pages.schedulePage.getTittleSchedule();
-        pages.schedulePage.getPremiumLesson();
-        pages.schedulePage.getStandardLesson();
-        pages.schedulePage.getUpcomingTab();
-        pages.schedulePage.getCompletedTab();
-        pages.schedulePage.getTimeZoneText();
-        pages.schedulePage.getNoLessonsMessage();
-        pages.schedulePage.getBookLessonsButton();
-        pages.schedulePage.getPremiumLessonCount();
-        pages.schedulePage.getStandardLessonCount();
+        pages.testSchedulePage.getTittleSchedule();
+        pages.testSchedulePage.getPremiumLesson();
+        pages.testSchedulePage.getStandardLesson();
+        pages.testSchedulePage.getUpcomingTab();
+        pages.testSchedulePage.getCompletedTab();
+        pages.testSchedulePage.getTimeZoneText();
+        pages.testSchedulePage.getNoLessonsMessage();
+        pages.testSchedulePage.getBookLessonsButton();
+        pages.testSchedulePage.getPremiumLessonCount();
+        pages.testSchedulePage.getStandardLessonCount();
 
 
     }

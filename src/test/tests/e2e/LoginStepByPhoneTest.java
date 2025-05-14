@@ -17,6 +17,9 @@ public class LoginStepByPhoneTest extends base.AppiumBaseTest {
         BasePages pages = new BasePages();
         pages.initPages(driver);
 
+        // Клик по кнопке "Allow", если она есть
+        pages.allowPermission.clickAllowIfVisible();
+
         //* Steps:
         // Click on SkipButton
         pages.firstScreen.getSkipButton().click();
