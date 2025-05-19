@@ -33,6 +33,7 @@ public class CapabilitiesProvider {
         capabilities.setCapability("noReset", false);
         capabilities.setCapability("fullReset", true);
 
+
         return capabilities;
     }
 }

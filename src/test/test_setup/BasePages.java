@@ -13,9 +13,10 @@ public class BasePages {
     public LoginStepByPhonePage testLogInStepByPhone;
     public LoginWithPasswordPhonePage testLoginWithPasswordPhone;
     public LoginWithPasswordEmailPage testLoginWithPasswordEmail;
-    public PreTrialDashboardAfterCancelTrialPage dashboardPage;
+    public PreTrialDashboardAfterCancelTrialPage testDashboardPage;
     public OpenScheduleTabPage testSchedulePage;
     public OpenAchievementTabPage testOpenAchievementTabPage;
+    public OpenProgramPage testOpenProgramPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -27,8 +28,9 @@ public class BasePages {
         testLogInStepByPhone = new LoginStepByPhonePage(driver);
         testLoginWithPasswordPhone = new LoginWithPasswordPhonePage(driver);
         testLoginWithPasswordEmail = new LoginWithPasswordEmailPage(driver);
-        dashboardPage = new PreTrialDashboardAfterCancelTrialPage(driver);
+        testDashboardPage = new PreTrialDashboardAfterCancelTrialPage(driver);
         testSchedulePage = new OpenScheduleTabPage(driver);
         testOpenAchievementTabPage = new OpenAchievementTabPage(driver);
+        testOpenProgramPage = new OpenProgramPage(driver);
     }
 }

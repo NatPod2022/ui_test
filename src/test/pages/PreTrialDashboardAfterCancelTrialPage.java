@@ -4,7 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import io.appium.java_client.MobileBy;
+
 import test.interactions.BaseActions;
 
 public class PreTrialDashboardAfterCancelTrialPage extends BaseActions {

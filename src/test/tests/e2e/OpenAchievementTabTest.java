@@ -40,7 +40,7 @@ public class OpenAchievementTabTest extends AppiumBaseTest {
         pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
         // Click on Achievement tab
-        pages.dashboardPage.getAchievementTab().click();
+        pages.testDashboardPage.getAchievementTab().click();
 
         // Checks:
         pages.testOpenAchievementTabPage.getLevelCard();

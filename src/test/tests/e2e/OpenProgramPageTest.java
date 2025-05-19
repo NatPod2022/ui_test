@@ -1,16 +1,15 @@
 package test.tests.e2e;
 
-import base.AppiumBaseTest;
 import org.junit.Test;
-
+import base.AppiumBaseTest;
 import test.test_setup.BasePages;
 
-public class PreTrialDashboardAfterCancelTrialTest extends AppiumBaseTest {
+public class OpenProgramPageTest extends AppiumBaseTest {
 
     @Test
-    // Test Case #8
-    public void testPreTrialDashboardAfterCancelTrialFlow() {
-        // Инициализация всех Page Object'ов через BasePages
+    // Test Case #11
+    public void testOpenProgramPageElements() {
+        // Инициализация всех Page Object'ов
         BasePages pages = new BasePages();
         pages.initPages(driver);
 
@@ -41,19 +40,24 @@ public class PreTrialDashboardAfterCancelTrialTest extends AppiumBaseTest {
         // Click on Sign in
         pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
-        // Check:
-        pages.testDashboardPage.getLogoParent();
-        pages.testDashboardPage.getLabelNovakid();
-        pages.testDashboardPage.getTitle();
-        pages.testDashboardPage.getBookButton();
-        pages.testDashboardPage.getDashboardTab();
-        pages.testDashboardPage.getTextWeAreSorry();
-        pages.testDashboardPage.getStudentBlock();
-        pages.testDashboardPage.getSupportTab();
-        pages.testDashboardPage.getAchievementTab();
-        pages.testDashboardPage.getKaTab();
-        pages.testDashboardPage.getScheduleTab();
-        pages.testDashboardPage.getTitleHomework();
+        // Click on Achievement tab
+        pages.testDashboardPage.getAchievementTab().click();
+
+        // Checks:
+        pages.testOpenAchievementTabPage.getLevelCard().click();
+
+        // Проверка элементов:
+        pages.testOpenProgramPage.getProgramTitle();
+        pages.testOpenProgramPage.getBackButton();
+        pages.testOpenProgramPage.getLevel0();
+        pages.testOpenProgramPage.getLevel1();
+        pages.testOpenProgramPage.getLevel2();
+        // Скролим вниз
+        pages.testOpenProgramPage.scrollDown();
+        pages.testOpenProgramPage.getLevel3();
+        pages.testOpenProgramPage.getLevel4();
+        pages.testOpenProgramPage.getLevel5();
+        pages.testOpenProgramPage.getLevel6();
 
     }
 }

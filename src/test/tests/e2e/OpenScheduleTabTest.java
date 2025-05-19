@@ -40,7 +40,7 @@ public class OpenScheduleTabTest extends AppiumBaseTest {
         pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
         // Click on Schedule tab
-        pages.dashboardPage.getScheduleTab().click();
+        pages.testDashboardPage.getScheduleTab().click();
 
         // Checks:
         pages.testSchedulePage.getTittleSchedule();
