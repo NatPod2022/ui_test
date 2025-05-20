@@ -17,6 +17,7 @@ public class BasePages {
     public OpenScheduleTabPage testSchedulePage;
     public OpenAchievementTabPage testOpenAchievementTabPage;
     public OpenProgramPage testOpenProgramPage;
+    public OpenIntercomPage testOpenIntercomPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -32,5 +33,6 @@ public class BasePages {
         testSchedulePage = new OpenScheduleTabPage(driver);
         testOpenAchievementTabPage = new OpenAchievementTabPage(driver);
         testOpenProgramPage = new OpenProgramPage(driver);
+        testOpenIntercomPage = new OpenIntercomPage(driver);
     }
 }
