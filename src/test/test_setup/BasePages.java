@@ -19,6 +19,7 @@ public class BasePages {
     public OpenProgramPage testOpenProgramPage;
     public OpenIntercomPage testOpenIntercomPage;
     public RightMenuListPage testRightMenuListPage;
+    public NewStudentPage testNewStudentPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -36,5 +37,6 @@ public class BasePages {
         testOpenProgramPage = new OpenProgramPage(driver);
         testOpenIntercomPage = new OpenIntercomPage(driver);
         testRightMenuListPage = new RightMenuListPage(driver);
+        testNewStudentPage = new NewStudentPage(driver);
     }
 }

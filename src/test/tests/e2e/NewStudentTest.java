@@ -1,14 +1,13 @@
 package test.tests.e2e;
 
 import org.junit.Test;
-import base.AppiumBaseTest;
 import test.test_setup.BasePages;
 
-public class OpenIntercomTest extends AppiumBaseTest {
+public class NewStudentTest extends base.AppiumBaseTest {
 
     @Test
-    // Test Case #12
-    public void testOpenIntercomElements() {
+    // Test Case #XX — проверка отображения элементов на экране New Student
+    public void testNewStudentPageElements() throws InterruptedException {
         // Инициализация всех Page Object'ов через BasePages
         BasePages pages = new BasePages();
         pages.initPages(driver);
@@ -36,25 +35,26 @@ public class OpenIntercomTest extends AppiumBaseTest {
         pages.testLoginWithPasswordEmail.getPasswordInputField().click();
         pages.testLoginWithPasswordEmail.getPasswordInputField().sendKeys("12345678");
 
+
         // Click on Sign in
         pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
-        // Клик по иконке Intercom
-        pages.testDashboardPage.getSupportTab().click();
+        // Открываем правое меню
+        pages.testDashboardPage.getLogoParent().click();
 
-        // Проверка элементов на экране Intercom
-        pages.testOpenIntercomPage.getGreetingText();
-        pages.testOpenIntercomPage.getHelpTitle();
-        pages.testOpenIntercomPage.getHelpTab();
-        pages.testOpenIntercomPage.getMessagesTab();
-        pages.testOpenIntercomPage.getSearchInput();
-        pages.testOpenIntercomPage.getArticleDiscount();
-        pages.testOpenIntercomPage.getArticleBooking();
-        pages.testOpenIntercomPage.getArticleLessonTypes();
-        //pages.testOpenIntercomPage.getArticlePrices();
-        pages.testOpenIntercomPage.getHelpCenterFooter();
-        pages.testOpenIntercomPage.getSendMessageButton();
-        pages.testOpenIntercomPage.getScrollArea();
-        pages.testOpenIntercomPage.getCloseButton();
+        //Click на New student
+        pages.testRightMenuListPage.getNewStudentIcon().click();
+
+
+        //* Проверка отображения элементов
+        pages.testNewStudentPage.getBackButton();
+        pages.testNewStudentPage.getNewStudentTitle();
+        pages.testNewStudentPage.getGirlRadioButton();
+        pages.testNewStudentPage.getGirlLabel();
+        pages.testNewStudentPage.getBoyRadioButton();
+        pages.testNewStudentPage.getBoyLabel();
+        pages.testNewStudentPage.getFirstNameInput();
+        pages.testNewStudentPage.getLastNameInput();
+        pages.testNewStudentPage.getAddNewChildButton();
     }
 }
