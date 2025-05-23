@@ -21,6 +21,7 @@ public class BasePages {
     public RightMenuListPage testRightMenuListPage;
     public NewStudentPage testNewStudentPage;
     public AccountPage testAccountPage;
+    public SubscriptionTrialPage testSubscriptionTrialPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -40,5 +41,6 @@ public class BasePages {
         testRightMenuListPage = new RightMenuListPage(driver);
         testNewStudentPage = new NewStudentPage(driver);
         testAccountPage = new AccountPage(driver);
+        testSubscriptionTrialPage = new SubscriptionTrialPage(driver);
     }
 }
