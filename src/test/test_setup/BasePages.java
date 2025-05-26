@@ -22,6 +22,7 @@ public class BasePages {
     public NewStudentPage testNewStudentPage;
     public AccountPage testAccountPage;
     public SubscriptionTrialPage testSubscriptionTrialPage;
+    public OldBonusPage testOldBonusPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -42,5 +43,6 @@ public class BasePages {
         testNewStudentPage = new NewStudentPage(driver);
         testAccountPage = new AccountPage(driver);
         testSubscriptionTrialPage = new SubscriptionTrialPage(driver);
+        testOldBonusPage = new OldBonusPage(driver);
     }
 }
