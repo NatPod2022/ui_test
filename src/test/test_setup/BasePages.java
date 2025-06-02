@@ -25,6 +25,7 @@ public class BasePages {
     public OldBonusPage testOldBonusPage;
     public LibraryPage testLibraryPage;
     public SpeakingPracticePage testSpeakingPracticePage;
+    public HelpPage testHelpPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -48,5 +49,6 @@ public class BasePages {
         testOldBonusPage = new OldBonusPage(driver);
         testLibraryPage = new LibraryPage(driver);
         testSpeakingPracticePage = new SpeakingPracticePage(driver);
+        testHelpPage = new HelpPage(driver);
     }
 }

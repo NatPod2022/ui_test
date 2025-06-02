@@ -6,13 +6,13 @@ import test.test_setup.BasePages;
 public class SpeakingPracticePageTest extends base.AppiumBaseTest {
 
     @Test
-    // Test Case #19 — проверка отображения элементов на экране Speaking Practice
+    // Test Case #19 — check visibility of elements on Speaking Practice screen
     public void testSpeakingPracticePageElements() throws InterruptedException {
-        // Инициализация всех Page Object'ов через BasePages
+        // Initialize all Page Objects via BasePages
         BasePages pages = new BasePages();
         pages.initPages(driver);
 
-        // Клик по кнопке "Allow", если она есть
+        // Click on "Allow" button if visible
         pages.allowPermission.clickAllowIfVisible();
 
         // Steps:
