@@ -27,6 +27,7 @@ public class BasePages {
     public SpeakingPracticePage testSpeakingPracticePage;
     public HelpPage testHelpPage;
     public LogOutPopupPage testLogOutPopupPage;
+    public PersonalInformationPage testPersonalInformationPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -52,5 +53,6 @@ public class BasePages {
         testSpeakingPracticePage = new SpeakingPracticePage(driver);
         testHelpPage = new HelpPage(driver);
         testLogOutPopupPage = new LogOutPopupPage(driver);
+        testPersonalInformationPage = new PersonalInformationPage(driver);
     }
 }

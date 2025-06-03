@@ -34,7 +34,8 @@ public class HelpPage extends BaseActions {
 
     public By accountText = By.xpath("//android.widget.TextView[@text='Your Novakid account']");
     public By accountDescription = By.xpath("//android.widget.TextView[@text='Guidance to your account, managing its settings and personal information']");
-    public By accountArticles = By.xpath("(//android.widget.TextView[@text='2 articles'])[2]");
+    public By accountArticles = By.xpath("(//android.widget.TextView[@text='1 article'])[3]");
+
 
     public WebElement getBackButton() {
         return waitForElementPresent(backButton, "Cannot find Back button", 5, true);

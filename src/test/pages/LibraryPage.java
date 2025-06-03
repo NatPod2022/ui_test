@@ -12,7 +12,8 @@ public class LibraryPage extends BaseActions {
     }
 
     public By backButton = By.xpath("//android.widget.Button[@content-desc='Back']");
-    public By beginnersGroupsButton = By.xpath("//android.widget.Button[@text='Groups - Beginners: Activity Books']");
+    public By beginnersGroupsButton = By.xpath("//android.widget.Button[contains(@text, 'Beginners')]");
+
 
     public WebElement getBackButton() {
         return waitForElementPresent(backButton, "Cannot find Back button", 5, true);
