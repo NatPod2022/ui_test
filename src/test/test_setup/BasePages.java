@@ -29,6 +29,9 @@ public class BasePages {
     public LogOutPopupPage testLogOutPopupPage;
     public PersonalInformationPage testPersonalInformationPage;
     public PasswordPage testPasswordPage;
+    public BalanceHistoryPage testBalanceHistoryPage;
+    public PrivacyPolicyPage testPrivacyPolicyPage;
+    public TermsAndConditionsPage testTermsAndConditionsPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -56,5 +59,8 @@ public class BasePages {
         testLogOutPopupPage = new LogOutPopupPage(driver);
         testPersonalInformationPage = new PersonalInformationPage(driver);
         testPasswordPage = new PasswordPage(driver);
+        testBalanceHistoryPage = new BalanceHistoryPage(driver);
+        testPrivacyPolicyPage = new PrivacyPolicyPage(driver);
+        testTermsAndConditionsPage = new TermsAndConditionsPage(driver);
     }
 }

@@ -41,7 +41,7 @@ public class RightMenuListTest extends AppiumBaseTest {
         // Открываем правое меню
         pages.testDashboardPage.getLogoParent().click();
 
-        // Проверка всех элементов
+        // Check all elements on page
         pages.testRightMenuListPage.getPpSection();
         pages.testRightMenuListPage.getUserName();
         pages.testRightMenuListPage.getMishaIcon();
