@@ -28,6 +28,7 @@ public class BasePages {
     public HelpPage testHelpPage;
     public LogOutPopupPage testLogOutPopupPage;
     public PersonalInformationPage testPersonalInformationPage;
+    public PasswordPage testPasswordPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -54,5 +55,6 @@ public class BasePages {
         testHelpPage = new HelpPage(driver);
         testLogOutPopupPage = new LogOutPopupPage(driver);
         testPersonalInformationPage = new PersonalInformationPage(driver);
+        testPasswordPage = new PasswordPage(driver);
     }
 }
