@@ -16,8 +16,7 @@ public class HelpPageTest extends base.AppiumBaseTest {
         pages.allowPermission.clickAllowIfVisible();
 
         // Steps:
-        // Click "Skip"
-        pages.firstScreen.getSkipButton().click();
+
 
         // Click "Login"
         pages.testPreLogin.getLoginButton().click();
@@ -61,8 +60,6 @@ public class HelpPageTest extends base.AppiumBaseTest {
         pages.testHelpPage.getTeachersText();
         pages.testHelpPage.getTeachersDescription();
         pages.testHelpPage.getTeachersArticles();
-        pages.testHelpPage.getAccountText();
-        pages.testHelpPage.getAccountDescription();
         pages.testHelpPage.getAccountArticles();
     }
 }

@@ -18,7 +18,7 @@ public class RightMenuListPage extends BaseActions {
     public By accountIcon = By.xpath("//android.widget.ImageView[@content-desc='Account']");
     public By subscriptionIcon = By.xpath("//android.widget.ImageView[@content-desc='Subscription']");
     public By bonusesIcon = By.xpath("//android.widget.ImageView[@content-desc='Bonuses']");
-    public By librarySection = By.xpath("//android.view.View[@content-desc='Library']");
+    public By librarySection = By.xpath("//android.widget.Button[@content-desc='Library']");
     public By speakingPracticeIcon = By.xpath("//android.widget.ImageView[@content-desc='Speaking practice']");
     public By helpIcon = By.xpath("//android.widget.ImageView[@content-desc='Help']");
     public By logOutIcon = By.xpath("//android.widget.ImageView[@content-desc='Log out']");

@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 public class LogInPageFirstStepPage extends BaseActions {
 
 
-    public By logInTitle = By.xpath("//android.view.View[@content-desc='Log in to your account']");
-    public By logInGoogleButton = By.xpath("//android.widget.ImageView[@content-desc='Log in with Google']");
-    public By logInEmailPhoneButton = By.xpath("//android.widget.Button[@content-desc='Log in with email/phone']");
+    public By logInTitle = By.xpath("//android.view.View[@content-desc='Sign in to Novakid']");
+    public By logInGoogleButton = By.xpath("//android.widget.ImageView[@content-desc='Sign in with Google']");
+    public By logInEmailPhoneButton = By.xpath("//android.widget.Button[@content-desc='Sign in with email/phone']");
     public By haveYouAccountTitle = By.xpath("//android.view.View[contains(@content-desc, \"Don't have an account\")]");
     public By registerButton = By.xpath("//android.widget.Button[@content-desc='Register']");
 
@@ -19,7 +19,7 @@ public class LogInPageFirstStepPage extends BaseActions {
     }
 
     public WebElement getLogInTitle() {
-        return waitForElementPresent(logInTitle, "Cannot find 'Log in to your account' title", 5, true);
+        return waitForElementPresent(logInTitle, "Cannot find 'Sign in to Novakid to your account' title", 5, true);
     }
 
     public WebElement getLogInGoogleButton() {

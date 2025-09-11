@@ -25,8 +25,7 @@ public class LoginWithPasswordPhoneTest extends AppiumBaseTest {
         pages.allowPermission.clickAllowIfVisible();
 
         //* Steps:
-        // Click on Skip
-        pages.firstScreen.getSkipButton().click();
+
 
         // Click on LogIn
         pages.testPreLogin.getLoginButton().click();

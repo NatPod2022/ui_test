@@ -16,8 +16,7 @@ public class NewStudentTest extends base.AppiumBaseTest {
         pages.allowPermission.clickAllowIfVisible();
 
         // Steps:
-        // Click on Skip
-        pages.firstScreen.getSkipButton().click();
+
 
         // Click on LogIn
         pages.testPreLogin.getLoginButton().click();
@@ -54,7 +53,7 @@ public class NewStudentTest extends base.AppiumBaseTest {
         pages.testNewStudentPage.getBoyRadioButton();
         pages.testNewStudentPage.getBoyLabel();
         pages.testNewStudentPage.getFirstNameInput();
-        pages.testNewStudentPage.getLastNameInput();
+        pages.testNewStudentPage.getDateOfBirthInput();
         pages.testNewStudentPage.getAddNewChildButton();
     }
 }

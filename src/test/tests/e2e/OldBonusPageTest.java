@@ -16,8 +16,7 @@ public class OldBonusPageTest extends base.AppiumBaseTest {
         pages.allowPermission.clickAllowIfVisible();
 
         // Steps:
-        // Click on Skip
-        pages.firstScreen.getSkipButton().click();
+
 
         // Click on Login
         pages.testPreLogin.getLoginButton().click();

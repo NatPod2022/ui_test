@@ -17,14 +17,10 @@ public class FirstScreenTest extends base.AppiumBaseTest {
         BasePages pages = new BasePages();
         pages.initPages(driver);
 
-        // ✅ Клик по кнопке "Allow", если она есть
-        pages.allowPermission.clickAllowIfVisible();
-
         //Check FirstScreenPage elements
-        pages.firstScreen.getSkipButton();
-        pages.firstScreen.getOnlineLessonImage();
-        pages.firstScreen.getContinueElement();
-        pages.firstScreen.getButtonForward();
+        pages.firstScreen.getContentContainer();
+        pages.firstScreen.getAllow();
+        pages.firstScreen.getDenyButton();
 
 
     }

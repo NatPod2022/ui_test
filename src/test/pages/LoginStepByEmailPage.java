@@ -9,12 +9,12 @@ import org.openqa.selenium.WebElement;
 
 public class LoginStepByEmailPage extends BaseActions {
 
-    public By logInTitleSecondStep = By.xpath("//android.view.View[@content-desc='Log in to your account']");
+    public By logInTitleSecondStep = By.xpath("//android.view.View[@content-desc='Sign in to Novakid']");
     public By emailTab = By.xpath("//android.view.View[contains(@content-desc, 'Email')]");
     public By phoneTab = By.xpath("//android.view.View[contains(@content-desc, 'Phone')]");
     public By logInInputField = By.xpath("(//android.widget.EditText)[1]");
     public By continueButton = By.xpath("//android.widget.Button[@content-desc='Continue']");
-    public By loginWithPasswordButton = By.xpath("//android.widget.Button[@content-desc='Login with password']");
+    public By loginWithPasswordButton = By.xpath("//android.widget.Button[@content-desc='Sign in with password']");
     public By backButtonSecond = By.xpath("//android.widget.Button[contains(@content-desc, 'Back')]");
 
     public LoginStepByEmailPage(AppiumDriver driver) {
@@ -23,7 +23,7 @@ public class LoginStepByEmailPage extends BaseActions {
 
 
     public WebElement getLogInTitleSecondStep() {
-        return waitForElementPresent(logInTitleSecondStep, "Cannot find 'Log in to your account' title", 10, true);
+        return waitForElementPresent(logInTitleSecondStep, "Cannot find 'Sign in to Novakid' title", 10, true);
     }
 
     public WebElement getEmailTab() {
@@ -43,7 +43,7 @@ public class LoginStepByEmailPage extends BaseActions {
     }
 
     public WebElement getLoginWithPasswordButton() {
-        return waitForElementPresent(loginWithPasswordButton, "Cannot find 'Login with password' button", 5, true);
+        return waitForElementPresent(loginWithPasswordButton, "Cannot find 'Sign in with password' button", 5, true);
     }
 
     public WebElement getBackButtonSecond() {

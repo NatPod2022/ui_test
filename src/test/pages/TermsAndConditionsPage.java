@@ -1,7 +1,6 @@
 package test.pages;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import test.interactions.BaseActions;

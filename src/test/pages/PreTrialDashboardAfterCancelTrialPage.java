@@ -14,7 +14,7 @@ public class PreTrialDashboardAfterCancelTrialPage extends BaseActions {
     }
 
 
-    public By labelNovakid = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView");
+    public By labelNovakid = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.widget.ImageView");
     public By logoParent = By.xpath("//android.view.View[@content-desc='PP']");
     public By title = By.xpath("//android.view.View[@content-desc='Claim your free lesson!']");
     public By textWeAreSorry = By.xpath("//android.view.View[@content-desc=\"We're sorry you had to cancel your trial lesson. But you can rebook it. Do it now!\"]");

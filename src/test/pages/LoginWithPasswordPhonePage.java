@@ -7,9 +7,9 @@ import test.interactions.BaseActions;
 
 public class LoginWithPasswordPhonePage extends BaseActions {
 
-    public By passwordPhoneInputField = By.xpath("//android.view.View[contains(@content-desc, 'Log in to your account')]//android.widget.EditText");
+    public By passwordPhoneInputField = By.xpath("//android.view.View[contains(@content-desc, 'Sign in to Novakid')]//android.widget.EditText");
     public By signInPhoneButton = By.xpath("//android.widget.Button[contains(@content-desc, 'Sign in')]");
-    public By loginWithAccessPhoneCodeButton = By.xpath("//android.widget.Button[contains(@content-desc, 'Login with access code')]");
+    public By loginWithAccessPhoneCodeButton = By.xpath("//android.widget.Button[contains(@content-desc, 'Sign in with access code')]");
     public By forgotPasswordPhoneButton = By.xpath("//android.widget.Button[@content-desc='I forgot password']");
 
     public LoginWithPasswordPhonePage(AppiumDriver driver) {

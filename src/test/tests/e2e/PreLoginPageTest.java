@@ -19,13 +19,12 @@ public class PreLoginPageTest extends base.AppiumBaseTest {
         pages.allowPermission.clickAllowIfVisible();
 
         //*Steps:
-        // Click on Skip
-        pages.firstScreen.getSkipButton().click();
+
 
         // Check PreLoginPage elements
-        pages.testPreLogin.getBackButton();
+        pages.testPreLogin.getWelcomeTitle();
+        pages.testPreLogin.getSubtitleText();
         pages.testPreLogin.getTryForFreeButton();
-        pages.testPreLogin.getWidgetScheduleLessons();
         pages.testPreLogin.getLoginButton();
     }
 }

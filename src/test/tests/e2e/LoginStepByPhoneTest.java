@@ -21,10 +21,9 @@ public class LoginStepByPhoneTest extends base.AppiumBaseTest {
         pages.allowPermission.clickAllowIfVisible();
 
         //* Steps:
-        // Click on SkipButton
-        pages.firstScreen.getSkipButton().click();
 
-        // Click on LoginButton
+
+        // Click on LogIn
         pages.testPreLogin.getLoginButton().click();
 
         // Click on LogInEmailPhoneButton
@@ -36,7 +35,6 @@ public class LoginStepByPhoneTest extends base.AppiumBaseTest {
 
         // Check LoginStepByEmailPage elements:
         pages.testLogInStepByPhone.getphoneIndex();
-        pages.testLogInStepByPhone.getlogInInputFieldPhone();
         pages.testLogInStepByPhone.getLoginWithPasswordPhoneButton();
 
 

@@ -13,7 +13,7 @@ public class HelpPage extends BaseActions {
 
     public By backButton = By.xpath("//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.Button");
     public By helpTitle = By.xpath("//android.widget.TextView[@text='Help']");
-    public By collectionsCount = By.xpath("//android.widget.TextView[@text='8 collections']");
+    public By collectionsCount = By.xpath("//android.widget.TextView[@text='9 collections']");
 
     public By organizeTrialText = By.xpath("//android.widget.TextView[@text='Organize or adjust your trial lesson']");
     public By bookingText = By.xpath("//android.widget.TextView[@text='Booking, moving or cancelation of a lesson']");
@@ -32,9 +32,11 @@ public class HelpPage extends BaseActions {
     public By teachersDescription = By.xpath("//android.widget.TextView[@text='Managing your Novakid teacher preferences, including substitute teacher option.']");
     public By teachersArticles = By.xpath("(//android.widget.TextView[@text='1 article'])[2]");
 
-    public By accountText = By.xpath("//android.widget.TextView[@text='Your Novakid account']");
-    public By accountDescription = By.xpath("//android.widget.TextView[@text='Guidance to your account, managing its settings and personal information']");
-    public By accountArticles = By.xpath("(//android.widget.TextView[@text='1 article'])[3]");
+    //public By accountText = By.xpath("//android.widget.TextView[@text='Your Novakid account']");
+    public By accountText = By.xpath("//android.widget.TextView[contains(@text,'Your Novakid account')]");
+    //public By accountDescription = By.xpath("//android.widget.TextView[@text='Guidance to your account, managing its settings and personal information']");
+    public By accountDescription = By.xpath("//android.widget.TextView[contains(@text,'Guidance to your account')]");
+    public By accountArticles = By.xpath("(//android.widget.TextView[@text='1 article'])[2]");
 
 
     public WebElement getBackButton() {
@@ -46,7 +48,7 @@ public class HelpPage extends BaseActions {
     }
 
     public WebElement getCollectionsCount() {
-        return waitForElementPresent(collectionsCount, "Cannot find '8 collections' text", 5, true);
+        return waitForElementPresent(collectionsCount, "Cannot find '9 collections' text", 5, true);
     }
 
     public WebElement getOrganizeTrialText() {

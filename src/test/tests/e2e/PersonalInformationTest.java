@@ -16,8 +16,7 @@ public class PersonalInformationTest extends base.AppiumBaseTest {
         pages.allowPermission.clickAllowIfVisible();
 
         // Steps:
-        // Click "Skip"
-        pages.firstScreen.getSkipButton().click();
+
 
         // Click "Login"
         pages.testPreLogin.getLoginButton().click();

@@ -10,14 +10,15 @@ public class NewStudentPage extends BaseActions {
     public By backButton = By.xpath("//android.widget.Button[@content-desc='Back']");
     public By newStudentTitle = By.xpath("//android.view.View[@content-desc='New student']");
 
-    public By girlRadioButton = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.RadioButton[1]");
+    public By girlRadioButton = By.xpath("\t\n" +
+            "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.RadioButton[1]");
     public By girlLabel = By.xpath("//android.view.View[@content-desc='Girl']");
 
-    public By boyRadioButton = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.RadioButton[2]");
+    public By boyRadioButton = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.RadioButton[2]");
     public By boyLabel = By.xpath("//android.view.View[@content-desc='Boy']");
 
-    public By firstNameInput = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[1]");
-    public By lastNameInput = By.xpath("//android.widget.FrameLayout[@resource-id='android:id/content']/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.widget.EditText[2]");
+    public By firstNameInput = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.EditText[1]");
+    public By dateOfBirthInput = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View/android.view.View[2]/android.widget.EditText[2]");
 
     public By addNewChildButton = By.xpath("//android.widget.Button[@content-desc='Add a new child']");
 
@@ -53,8 +54,8 @@ public class NewStudentPage extends BaseActions {
         return waitForElementPresent(firstNameInput, "Cannot find first name input", 5, true);
     }
 
-    public WebElement getLastNameInput() {
-        return waitForElementPresent(lastNameInput, "Cannot find last name input", 5, true);
+    public WebElement getDateOfBirthInput() {
+        return waitForElementPresent(dateOfBirthInput, "Cannot find last name input", 5, true);
     }
 
     public WebElement getAddNewChildButton() {

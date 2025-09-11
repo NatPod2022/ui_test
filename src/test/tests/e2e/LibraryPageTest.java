@@ -14,21 +14,26 @@ public class LibraryPageTest extends base.AppiumBaseTest {
         // Клик по кнопке "Allow", если она есть
         pages.allowPermission.clickAllowIfVisible();
 
-        // Авторизация
-        pages.firstScreen.getSkipButton().click();
+        // Click "Login"
         pages.testPreLogin.getLoginButton().click();
+
+        // Click "Log In with Email/Phone"
         pages.testLogInPageFirstStep.getLogInEmailPhoneButton().click();
+
+        // Click "Login with Password"
         pages.testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
 
+        // Enter email and password
         pages.testLogInStepByEmail.getLogInInputField().click();
         pages.testLogInStepByEmail.getLogInInputField().sendKeys("np_test@mail.nv");
 
         pages.testLoginWithPasswordEmail.getPasswordInputField().click();
         pages.testLoginWithPasswordEmail.getPasswordInputField().sendKeys("12345678");
 
+        // Click "Sign In"
         pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
-        // Открываем правое меню
+        // Open right menu
         pages.testDashboardPage.getLogoParent().click();
 
         // Переход на LibraryPage

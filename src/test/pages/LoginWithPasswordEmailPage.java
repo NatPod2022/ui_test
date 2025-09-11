@@ -11,7 +11,7 @@ public class LoginWithPasswordEmailPage extends BaseActions {
     public By passwordInputField = By.xpath("(//android.widget.EditText)[2]");
 
     public By signInButton = By.xpath("//android.widget.Button[contains(@content-desc, 'Sign in')]");
-    public By loginWithAccessCodeButton = By.xpath("//android.widget.Button[contains(@content-desc, 'Login with access code')]");
+    public By loginWithAccessCodeButton = By.xpath("//android.widget.Button[contains(@content-desc, 'Sign in with access code')]");
     public By forgotPasswordButton = By.xpath("//android.widget.Button[@content-desc='I forgot password']");
 
     public LoginWithPasswordEmailPage(AppiumDriver driver) {

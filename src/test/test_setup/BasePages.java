@@ -32,6 +32,7 @@ public class BasePages {
     public BalanceHistoryPage testBalanceHistoryPage;
     public PrivacyPolicyPage testPrivacyPolicyPage;
     public TermsAndConditionsPage testTermsAndConditionsPage;
+    public ChooseTeacherPage testChooseTeacherPage;
 
     public void initPages(AppiumDriver driver) {
 
@@ -62,5 +63,6 @@ public class BasePages {
         testBalanceHistoryPage = new BalanceHistoryPage(driver);
         testPrivacyPolicyPage = new PrivacyPolicyPage(driver);
         testTermsAndConditionsPage = new TermsAndConditionsPage(driver);
+        testChooseTeacherPage = new ChooseTeacherPage(driver);
     }
 }

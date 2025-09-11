@@ -3,11 +3,11 @@ package test.tests.e2e;
 import org.junit.Test;
 import test.test_setup.BasePages;
 
-public class LogOutPopupTest extends base.AppiumBaseTest {
+public class ChooseTeacherPageTest extends base.AppiumBaseTest {
 
     @Test
-    // Test Case #21 — check visibility of elements in the Log Out popup
-    public void testLogOutPopupElements() throws InterruptedException {
+    // Test Case #28 — check visibility of elements on Choose Teacher screen
+    public void testChooseTeacherPageElements() throws InterruptedException {
         // Initialize all Page Objects via BasePages
         BasePages pages = new BasePages();
         pages.initPages(driver);
@@ -18,13 +18,13 @@ public class LogOutPopupTest extends base.AppiumBaseTest {
         // Steps:
 
 
-        // Click on "Login"
+        // Click "Login"
         pages.testPreLogin.getLoginButton().click();
 
-        // Click on "Log In with Email/Phone"
+        // Click "Log In with Email/Phone"
         pages.testLogInPageFirstStep.getLogInEmailPhoneButton().click();
 
-        // Click on "Login with Password"
+        // Click "Login with Password"
         pages.testLogInStepByPhone.getLoginWithPasswordPhoneButton().click();
 
         // Enter email and password
@@ -37,15 +37,17 @@ public class LogOutPopupTest extends base.AppiumBaseTest {
         // Click "Sign In"
         pages.testLoginWithPasswordPhone.getSignInPhoneButton().click();
 
-        // Open right menu
-        pages.testDashboardPage.getLogoParent().click();
+        // Click on Schedule tab
+        pages.testDashboardPage.getScheduleTab().click();
 
-        // Click on "Log Out"
-        pages.testRightMenuListPage.getLogOutIcon().click();
+        // Click on Book button
+        pages.testSchedulePage.getBookLessonsButton().click();;
 
-        // Assertions: check logout popup elements
-        pages.testLogOutPopupPage.getPopupText();
-        pages.testLogOutPopupPage.getCancelButton();
-        pages.testLogOutPopupPage.getConfirmLogoutButton();
+        // Check all elements on Choose Teacher screen
+        pages.testChooseTeacherPage.getBackButton();
+        pages.testChooseTeacherPage.getChooseTeacherTitle();
+        pages.testChooseTeacherPage.getAvailableTeachersLabel();
+        pages.testChooseTeacherPage.getReadMoreButton();
+        pages.testChooseTeacherPage.getBookLessonButton();
     }
 }
